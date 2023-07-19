@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  gap: 0.4em;
+  font-size: 4em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.letter {
+  width: 1.75ch;
+  height: 2.5ch;
+  text-align: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom: 0.1em solid white;
+}
+
+@media (width<700px) {
+  .container {
+    font-size: 3em;
+  }
+}
+@media (width<500px) {
+  .container {
+    font-size: 2em;
+  }
+}
