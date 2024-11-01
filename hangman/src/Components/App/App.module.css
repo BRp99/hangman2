@@ -1,10 +1,8 @@
 .containerApp {
   width: 100%;
-  /* height: 660px; */
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  /* margin: 0px 180px; */
   align-items: center;
 }
 

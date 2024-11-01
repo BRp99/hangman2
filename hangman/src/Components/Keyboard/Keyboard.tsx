@@ -1,32 +1,5 @@
 import styles from "./Keyboard.module.css"
-const alphabet = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-]
+const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
 interface Props {
   disabled?: boolean
@@ -35,12 +8,7 @@ interface Props {
   addGuessedLetters: (letter: string) => void
 }
 
-export default function Keyboard({
-  activeLetters,
-  inactiveLetters,
-  addGuessedLetters,
-  disabled = false,
-}: Props) {
+export default function Keyboard({ activeLetters, inactiveLetters, addGuessedLetters, disabled = false }: Props) {
   return (
     <div className={styles.gridKeyboard}>
       {alphabet.map((key) => {
