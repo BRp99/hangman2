@@ -11,6 +11,13 @@
   text-align: center;
 }
 
+.infoMessage {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 .tryAgainButton {
   padding: 1.3em 3em;
   font-size: 12px;
@@ -25,6 +32,10 @@
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
+}
+
+.niceTry {
+  margin-top: 2rem;
 }
 
 .tryAgainButton:hover {

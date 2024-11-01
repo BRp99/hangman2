@@ -48,6 +48,7 @@ export default function App() {
 
   return (
     <div className={styles.containerApp}>
+      <div className={styles.infoMessage}>Note: This game does not provide hints. All words are in English.</div>
       <div className={styles.winnerOrLoser}>
         {isWinner && (
           <>
@@ -57,7 +58,7 @@ export default function App() {
         )}
         {isLoser && (
           <>
-            <div>Nice Try - Click enter or press the button to try again.</div>
+            <div className={styles.niceTry}>Nice Try - Click enter or press the button to try again.</div>
             <button className={styles.tryAgainButton} onClick={reset}>
               Try Again
             </button>
