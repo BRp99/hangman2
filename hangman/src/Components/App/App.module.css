@@ -7,7 +7,7 @@
 }
 
 .winnerOrLoser {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -20,6 +20,7 @@
 
 .tryAgainButton {
   padding: 1.3em 3em;
+  margin: 1rem;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
