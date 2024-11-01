@@ -58,7 +58,9 @@ export default function App() {
         {isLoser && (
           <>
             <div>Nice Try - Click enter or press the button to try again.</div>
-            <button onClick={reset}>Try Again</button>
+            <button className={styles.tryAgainButton} onClick={reset}>
+              Try Again
+            </button>
           </>
         )}
       </div>
