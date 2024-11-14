@@ -4,6 +4,7 @@
   font-size: 4em;
   font-weight: bold;
   text-transform: uppercase;
+  justify-content: center;
 }
 
 .letter {
@@ -11,19 +12,20 @@
   height: 2.5ch;
   text-align: center;
   display: flex;
-  text-align: center;
   justify-content: center;
   align-items: flex-end;
   border-bottom: 0.1em solid white;
 }
 
-@media (width<700px) {
+@media (max-width: 700px) {
   .container {
     font-size: 3em;
   }
 }
-@media (width<500px) {
+
+@media (max-width: 500px) {
   .container {
     font-size: 2em;
+    gap: 0.2em;
   }
 }
