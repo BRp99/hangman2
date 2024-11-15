@@ -65,6 +65,9 @@ export default function App() {
           <>
             <div className={styles.loserContainer}>
               <div>Nice Try! Better luck next time.</div>
+              <div className={styles.wordReveal}>
+                The word was: <strong>{wordToGuess}</strong>
+              </div>
               <button className={styles.tryAgainButton} onClick={reset}>
                 Try Again
               </button>

@@ -38,6 +38,12 @@
   text-align: center;
 }
 
+.wordReveal {
+  font-size: 1.2rem;
+  color: #ff5722;
+  margin-top: 10px;
+}
+
 .tryAgainButton {
   padding: 1.3em 3em;
   font-size: clamp(8px, 4vw + 1rem, 14px);
