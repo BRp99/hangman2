@@ -1,6 +1,5 @@
 .gallowDraw {
   position: relative;
-  background-color: red;
 }
 
 .gallowTopVertical {
@@ -18,32 +17,32 @@
   border-radius: 100%;
   border: 10px solid white;
   position: absolute;
-  top: 50px;
+  top: 40px;
   right: -20px;
 }
 
 .body {
   width: 10px;
-  height: 120px;
+  height: 130px;
   position: absolute;
   background: white;
-  top: 100px;
+  top: 85px;
   right: 0;
 }
 
 .rightArm {
-  width: 100px;
+  width: 65px;
   height: 10px;
   background: white;
   position: absolute;
   top: 150px;
-  right: -100px;
+  right: -65px;
   rotate: -20deg;
   transform-origin: left bottom;
 }
 
 .leftArm {
-  width: 100px;
+  width: 65px;
   height: 10px;
   background: white;
   position: absolute;
@@ -58,7 +57,7 @@
   height: 10px;
   background: white;
   position: absolute;
-  top: 210px;
+  top: 205px;
   right: -90px;
   rotate: 60deg;
   transform-origin: left bottom;
@@ -77,20 +76,36 @@
 
 .gallowTop {
   height: 10px;
-  width: 200px;
+  width: 100px;
   background: white;
-  margin-left: 120px;
+  margin-left: 50px;
 }
 
 .verticalBar {
   height: 300px;
   width: 10px;
   background: white;
-  margin-left: 120px;
+  margin-left: 50px;
 }
 
 .gallowBase {
   height: 10px;
-  width: 210px;
+  width: 100px;
   background: white;
+}
+
+@media (max-width: 325px) {
+  .rightArm {
+    width: 55px;
+    right: -50px;
+  }
+
+  .leftArm {
+    width: 55px;
+    right: 5px;
+  }
+  .rightLeg {
+    width: 85px;
+    right: -75px;
+  }
 }
