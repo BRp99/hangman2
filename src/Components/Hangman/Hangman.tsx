@@ -1,4 +1,4 @@
-import styles from "./Hangman.module.css"
+import styles from './Hangman.module.css'
 
 interface Props {
   numberOfGuesses: number

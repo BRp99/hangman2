@@ -1,5 +1,6 @@
 .gallowDraw {
   position: relative;
+  background-color: red;
 }
 
 .gallowTopVertical {

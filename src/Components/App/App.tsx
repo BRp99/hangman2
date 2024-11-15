@@ -1,11 +1,11 @@
-import DisplayWord from "../DisplayWord/DisplayWord"
-import Hangman from "../Hangman/Hangman"
-import Keyboard from "../Keyboard/Keyboard"
-import styles from "./App.module.css"
-import { useState, useEffect } from "react"
-import englishWords from "../../words.json"
-import Lottie from "lottie-react"
-import fireWorkAnimation from "../../firework.json"
+import DisplayWord from '../DisplayWord/DisplayWord'
+import Hangman from '../Hangman/Hangman'
+import Keyboard from '../Keyboard/Keyboard'
+import styles from './App.module.css'
+import { useState, useEffect } from 'react'
+import englishWords from '../../words.json'
+import Lottie from 'lottie-react'
+import fireWorkAnimation from '../../firework.json'
 
 function getWords() {
   return englishWords[Math.floor(Math.random() * englishWords.length)]
@@ -18,7 +18,7 @@ export default function App() {
   const incorrectLetter = guessedLetter.filter((letter) => !wordToGuess.includes(letter))
 
   const isLoser = incorrectLetter.length >= 6
-  const isWinner = wordToGuess.split("").every((letter) => guessedLetter.includes(letter))
+  const isWinner = wordToGuess.split('').every((letter) => guessedLetter.includes(letter))
 
   function addGuessedLetter(letter: string) {
     if (guessedLetter.includes(letter) || isLoser || isWinner) return
@@ -36,36 +36,42 @@ export default function App() {
       if (key.match(/^[a-z]$/)) {
         e.preventDefault()
         addGuessedLetter(key)
-      } else if (key === "Enter") {
+      } else if (key === 'Enter') {
         e.preventDefault()
         reset()
       }
     }
 
-    document.addEventListener("keypress", handler)
-    return () => document.removeEventListener("keypress", handler)
+    document.addEventListener('keypress', handler)
+    return () => document.removeEventListener('keypress', handler)
   }, [])
 
   return (
     <div className={styles.containerApp}>
-      <div className={styles.infoMessage}>Note: This game does not provide hints. All words are in English.</div>
+      {!isWinner && !isLoser && <div className={styles.infoMessage}>Note: This game does not provide hints. All words are in English.</div>}
+
       <div className={styles.winnerOrLoser}>
         {isWinner && (
           <>
-            <span>You Win!! - Refresh the page to start again or click enter</span>
+            <span>You Win!!!</span>
+            <button className={styles.tryAgainButton} onClick={reset}>
+              Try Again
+            </button>
             <Lottie animationData={fireWorkAnimation} autoplay loop />
           </>
         )}
+
         {isLoser && (
           <>
-            <div className={styles.niceTry}>Nice Try - Click enter or press the button to try again.</div>
+            <div>Nice Try! Better luck next time.</div>
             <button className={styles.tryAgainButton} onClick={reset}>
               Try Again
             </button>
           </>
         )}
       </div>
-      {!isWinner && (
+
+      {!isWinner && !isLoser && (
         <>
           <Hangman numberOfGuesses={incorrectLetter.length} />
           <DisplayWord wordToGuess={wordToGuess} guessedLetter={guessedLetter} reveal={isLoser} />
