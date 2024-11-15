@@ -40,7 +40,6 @@
 
 .tryAgainButton {
   padding: 1.3em 3em;
-  /* font-size: clamp(10px, 2vw + 1rem, 16px); */
   font-size: clamp(8px, 4vw + 1rem, 14px);
   text-transform: uppercase;
   letter-spacing: 2.5px;
@@ -64,4 +63,10 @@
 
 .tryAgainButton:active {
   transform: translateY(-1px);
+}
+
+@media (max-width: 680px) {
+  .infoMessage {
+    font-weight: 600;
+  }
 }
