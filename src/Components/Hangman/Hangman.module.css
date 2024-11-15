@@ -18,7 +18,7 @@
   border: 10px solid white;
   position: absolute;
   top: 40px;
-  right: -20px;
+  right: -30px;
 }
 
 .body {
@@ -28,6 +28,7 @@
   background: white;
   top: 85px;
   right: 0;
+  margin-top: 15px;
 }
 
 .rightArm {
@@ -53,12 +54,12 @@
 }
 
 .rightLeg {
-  width: 100px;
+  width: 95px;
   height: 10px;
   background: white;
   position: absolute;
-  top: 205px;
-  right: -90px;
+  top: 220px;
+  right: -85px;
   rotate: 60deg;
   transform-origin: left bottom;
 }

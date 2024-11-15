@@ -63,10 +63,12 @@ export default function App() {
 
         {isLoser && (
           <>
-            <div>Nice Try! Better luck next time.</div>
-            <button className={styles.tryAgainButton} onClick={reset}>
-              Try Again
-            </button>
+            <div className={styles.loserContainer}>
+              <div>Nice Try! Better luck next time.</div>
+              <button className={styles.tryAgainButton} onClick={reset}>
+                Try Again
+              </button>
+            </div>
           </>
         )}
       </div>
