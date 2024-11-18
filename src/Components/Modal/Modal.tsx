@@ -35,10 +35,27 @@ export default function Modal({ isOpen, onClose }: Props) {
         </button>
         <h2>How to Play</h2>
         <ul>
-          <li>Guess the hidden word by clicking on the letters.</li>
-          <li>Each incorrect guess will draw a part of the hangman.</li>
-          <li>You have a total of 6 incorrect guesses before you lose.</li>
+          <li>
+            <strong>Objective:</strong> Guess the word before the hangman is fully drawn.
+          </li>
+          <li>
+            <strong>Description:</strong> The word is shown with blank spaces. Click a letter to guess. If you're right, the letter will appear in the
+            word. If you're wrong, part of the hangman will be drawn.
+          </li>
+          <li>
+            <strong>Wrong Guesses:</strong> You have 6 wrong guesses. Each wrong guess adds to the hangman drawing. If it's completed, you lose. ⚠️
+          </li>
+          <li>
+            <strong>No Hints:</strong>All words are part of the English language. There are no hints provided during the game. 🚫💡
+          </li>
+          <li>
+            <strong>Tips:</strong> Try guessing common letters like "e", "t", "r", and "n".
+          </li>
+          <li>
+            <strong>Restart:</strong> Click 'Try Again' to start over after the game ends.
+          </li>
         </ul>
+        <p className={styles.luck}>We wish you the best of luck! Enjoy the game! 🍀</p>
       </div>
     </div>
   )

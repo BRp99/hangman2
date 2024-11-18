@@ -17,6 +17,8 @@ export default function App() {
   const [wordToGuess, setWordToGuess] = useState(getWords())
   const [guessedLetter, setGuessedLetter] = useState<string[]>([])
 
+  console.log('word is:', wordToGuess)
+
   const incorrectLetter = guessedLetter.filter((letter) => !wordToGuess.includes(letter))
 
   const isLoser = incorrectLetter.length >= 6
@@ -28,8 +30,11 @@ export default function App() {
   }
 
   function reset() {
+    const newWord = getWords()
+    console.log('New word to guess is:', newWord)
     setGuessedLetter([])
-    setWordToGuess(getWords())
+    // setWordToGuess(getWords())
+    setWordToGuess(newWord)
   }
 
   function toggleModal() {
