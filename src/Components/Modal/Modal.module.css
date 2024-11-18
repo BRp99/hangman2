@@ -30,7 +30,7 @@
 
 .modalContent {
   background-color: #222;
-  padding: 30px;
+  padding: 20px;
   border-radius: 12px;
   max-width: 500px;
   width: 90%;
@@ -93,4 +93,58 @@ li {
   color: #ff8c00;
   margin-top: 20px;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .modalContent {
+    width: 80%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  ul {
+    padding-left: 15px;
+  }
+
+  li {
+    font-size: 0.9rem;
+  }
+
+  .closeIcon {
+    font-size: 20px;
+  }
+
+  .luck {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modalContent {
+    width: 90%;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  ul {
+    padding-left: 10px;
+  }
+
+  li {
+    font-size: 0.85rem;
+  }
+
+  .closeIcon {
+    font-size: 18px;
+  }
+
+  .luck {
+    font-size: 0.85rem;
+  }
 }

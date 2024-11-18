@@ -17,8 +17,6 @@ export default function App() {
   const [wordToGuess, setWordToGuess] = useState(getWords())
   const [guessedLetter, setGuessedLetter] = useState<string[]>([])
 
-  console.log('word is:', wordToGuess)
-
   const incorrectLetter = guessedLetter.filter((letter) => !wordToGuess.includes(letter))
 
   const isLoser = incorrectLetter.length >= 6
@@ -30,11 +28,8 @@ export default function App() {
   }
 
   function reset() {
-    const newWord = getWords()
-    console.log('New word to guess is:', newWord)
     setGuessedLetter([])
-    // setWordToGuess(getWords())
-    setWordToGuess(newWord)
+    setWordToGuess(getWords())
   }
 
   function toggleModal() {
@@ -69,19 +64,21 @@ export default function App() {
 
       <div className={styles.winnerOrLoser}>
         {isWinner && (
-          <>
-            <span>You Win!!!</span>
-            <button className={styles.tryAgainButton} onClick={reset}>
-              Try Again
-            </button>
-            <Lottie animationData={fireWorkAnimation} autoplay loop />
-          </>
+          <div className={styles.winnerOrLoser}>
+            <Lottie animationData={fireWorkAnimation} autoplay loop className={styles.fireworkAnimation} />
+            <div className={styles.winnerContent}>
+              <span className={styles.youWin}>You Win!!!</span>
+              <button className={styles.tryAgainButton} onClick={reset}>
+                Try Again
+              </button>
+            </div>
+          </div>
         )}
 
         {isLoser && (
           <>
             <div className={styles.loserContainer}>
-              <div>Nice Try! Better luck next time.</div>
+              <div className={styles.niceTry}>Nice Try! Better luck next time.</div>
               <div className={styles.wordReveal}>
                 The word was: <strong>{wordToGuess}</strong>
               </div>

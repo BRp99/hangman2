@@ -46,10 +46,10 @@ export default function Modal({ isOpen, onClose }: Props) {
             <strong>Wrong Guesses:</strong> You have 6 wrong guesses. Each wrong guess adds to the hangman drawing. If it's completed, you lose. ⚠️
           </li>
           <li>
-            <strong>No Hints:</strong>All words are part of the English language. There are no hints provided during the game. 🚫💡
+            <strong>No Hints:</strong> All words are part of the english language. There are no hints provided during the game. 🚫💡
           </li>
           <li>
-            <strong>Tips:</strong> Try guessing common letters like "e", "t", "r", and "n".
+            <strong>Tips:</strong> Try guessing common letters in english words like "e", "t", "r", and "n".
           </li>
           <li>
             <strong>Restart:</strong> Click 'Try Again' to start over after the game ends.
