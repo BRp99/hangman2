@@ -76,3 +76,18 @@
     font-weight: 600;
   }
 }
+
+.howToPlayButton {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.howToPlayButton:hover {
+  background-color: #ff5622cc;
+}

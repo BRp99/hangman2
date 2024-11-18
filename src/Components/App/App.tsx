@@ -6,12 +6,14 @@ import { useState, useEffect } from 'react'
 import englishWords from '../../words.json'
 import Lottie from 'lottie-react'
 import fireWorkAnimation from '../../firework.json'
+import Modal from '../Modal/Modal'
 
 function getWords() {
   return englishWords[Math.floor(Math.random() * englishWords.length)]
 }
 
 export default function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const [wordToGuess, setWordToGuess] = useState(getWords())
   const [guessedLetter, setGuessedLetter] = useState<string[]>([])
 
@@ -28,6 +30,10 @@ export default function App() {
   function reset() {
     setGuessedLetter([])
     setWordToGuess(getWords())
+  }
+
+  function toggleModal() {
+    setIsModalOpen((prev) => !prev)
   }
 
   useEffect(() => {
@@ -48,7 +54,13 @@ export default function App() {
 
   return (
     <div className={styles.containerApp}>
-      {!isWinner && !isLoser && <div className={styles.infoMessage}>Note: This game does not provide hints. All words are in English.</div>}
+      {!isWinner && !isLoser && (
+        <button className={styles.howToPlayButton} onClick={toggleModal}>
+          How to Play
+        </button>
+      )}
+
+      <Modal isOpen={isModalOpen} onClose={toggleModal} />
 
       <div className={styles.winnerOrLoser}>
         {isWinner && (
